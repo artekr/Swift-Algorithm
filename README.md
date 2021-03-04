@@ -1,16 +1,19 @@
 # Swift-Algorithm
-Practice data structure and algorithm with Swift
+
+Following [数据结构与算法之美](https://time.geekbang.org/column/intro/100017301) from Geekbang(极客时间). Practice data structure and algorithms using Swift.
+
+## Learning path
+
+![learning_path](assets/learning_path.png)
 
 ## Data Structure
 
-  * [Stack](./Data%20Structure/Stack)
-  * [Queue](./Data%20Structure/Queue)
-  * [Priority Queue](./Data%20Structure/Priority%20Queue)
-  * Heap
-  * [Linked List](./Data%20Structure/Linked%20List)
-  * [Tree](./Data%20Structure/Tree)
+* [Stack](./data_structure/stack)
+* [Queue](./data_structure/queue)
+* [Linked List](./data_structure/linked_list)
+* [Tree](./data_structure/tree)
 
 ## Algorithm
 
-  * Sorting
-  * Searching
+* Sorting
+* Searching
