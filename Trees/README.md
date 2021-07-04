@@ -2,8 +2,6 @@
 
 Some basic and common algorithms of a tree.
 
-## Trees
-
 1. Print a tree in level order
 
 ## Binary Trees
