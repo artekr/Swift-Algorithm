@@ -1,39 +1,5 @@
 //: Queue
 
-// A queue is a list where you can only insert new items at the back and remove items from the front.
-
-/************************************************************************/
-// MARK: - Queue
-public struct Queue<T> {
-  
-  fileprivate var array = [T]()
-  
-  public var isEmpty: Bool {
-    return array.isEmpty
-  }
-  
-  public var count: Int {
-    return array.count
-  }
-  
-  public var front: T? {
-    return array.first
-  }
-  
-  public mutating func enqueue(_ element: T) {
-    array.append(element)
-  }
-  
-  // To dequeue, we remove the element from the beginning of the array. This is always an O(n) operation because it requires all remaining array elements to be shifted in memory.
-  public mutating func dequeue() -> T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array.removeFirst()
-    }
-  }
-}
-
 /************************************************************************/
 // MARK: - More Efficient Queue
 
@@ -86,26 +52,22 @@ public struct MoreEfficientQueue<T> {
 // MARK: - Test
 
 // Queue Test
-var q1 = Queue<String>()
-q1.array
+var q1 = QueueArray<String>()
+print(q1)
 
 q1.enqueue("Ada")
 q1.enqueue("Steve")
 q1.enqueue("Tim")
-q1.array
-q1.count
+print(q1)
 
 q1.dequeue()
-q1.array
-q1.count
+print(q1)
 
 q1.dequeue()
-q1.array
-q1.count
+print(q1)
 
 q1.enqueue("Kevin")
-q1.array
-q1.count
+print(q1)
 
 // More Efficient Queue Test
 var q2 = MoreEfficientQueue<String>()
