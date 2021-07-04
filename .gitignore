@@ -1,2 +1,9 @@
+# Xcode
+
+## User settings
 xcuserdata/
 *.xctimeline
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
