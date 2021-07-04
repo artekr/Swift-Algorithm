@@ -4,7 +4,7 @@ Typical tree types are:
 
 - Tries
 - Binary Trees
-- Binary Search Trees(BST)
+- [Binary Search Trees(BST)](../binary_search_tree)
   - AVL Trees
   - Red-Black Trees(RBT)
 
