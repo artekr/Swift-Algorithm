@@ -4,14 +4,10 @@
 //
 /*
  FIFO
-
  A queue is a list where you can only insert new items at the back and remove items from the front.
-
-
  */
 
 public struct Queue<T> {
-
   private var array = [T]()
 
   public var isEmpty: Bool {
@@ -22,7 +18,7 @@ public struct Queue<T> {
     return array.count
   }
 
-  public var front: T? {
+  public var peek: T? {
     return array.first
   }
 
@@ -35,11 +31,7 @@ public struct Queue<T> {
   // O(n)
   // Because it requires all remaining array elements to be shifted in memory.
   public mutating func dequeue() -> T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array.removeFirst()
-    }
+    isEmpty ? nil : array.removeFirst()
   }
 }
 
