@@ -18,3 +18,11 @@ if exampleTree.contains(5) {
 } else {
   print("Couldn't find 5")
 }
+
+// Remove a node from BST
+var tree = exampleTree
+print("Tree before removal:")
+print(tree)
+tree.remove(3)
+print("Tree after removing root:")
+print(tree)
