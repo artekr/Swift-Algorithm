@@ -1,8 +1,8 @@
-struct Heap<T: Equatable> {
+public struct Heap<T: Equatable> {
   var elements: [T] = []
   let sort: (T, T) -> Bool
 
-  init(sort: @escaping (T, T) -> Bool, elements: [T] = []) {
+  public init(sort: @escaping (T, T) -> Bool, elements: [T] = []) {
     self.sort = sort
     self.elements = elements
 
@@ -13,15 +13,15 @@ struct Heap<T: Equatable> {
     }
   }
 
-  var isEmpty: Bool {
+  public var isEmpty: Bool {
     elements.isEmpty
   }
 
-  var count: Int {
+  public var count: Int {
     elements.count
   }
 
-  func peek() -> T? {
+  public func peek() -> T? {
     elements.first
   }
 
@@ -38,7 +38,7 @@ struct Heap<T: Equatable> {
   }
 
   /// get the min or max node
-  mutating func remove() -> T? {
+  public mutating func remove() -> T? {
     guard !isEmpty else {
       return nil
     }
@@ -73,7 +73,7 @@ struct Heap<T: Equatable> {
   }
 
   /// Inserting an elemtents, usually append at the end of the array
-  mutating func insert(_ element: T) {
+  public mutating func insert(_ element: T) {
     elements.append(element)
     siftUp(from: elements.count - 1)
   }
@@ -89,7 +89,7 @@ struct Heap<T: Equatable> {
   }
 
   /// Removing from an arbitrary index
-  mutating func remove(at index: Int) -> T? {
+  public mutating func remove(at index: Int) -> T? {
     guard index < elements.count else {
       return nil
     }
@@ -106,7 +106,7 @@ struct Heap<T: Equatable> {
   }
 
   /// Searching for an element in a heap
-  func index(of element: T, startingAt i: Int) -> Int? {
+  public func index(of element: T, startingAt i: Int) -> Int? {
     if i >= count {
       return nil
     }
@@ -125,16 +125,3 @@ struct Heap<T: Equatable> {
     return nil
   }
 }
-
-/**
-     Testing
- */
-
-var heap = Heap(sort: >, elements: [1,12,3,4,1,6,8,7])
-
-//print(heap)
-
-while !heap.isEmpty {
-  print(heap.remove()!)
-}
-
