@@ -37,3 +37,12 @@ index:(0,  1, 2, 3, 4, 5, 6, 7)
 **Q:** Given a non-zero based child index _i_, how do we get the index of its parent index?
 
 - Parent index: _(i - 1) / 2_
+
+## Operations complexity
+
+| Operations | Time Complexity |
+| ---------- | --------------- |
+| remove     | O(log n)        |
+| insert     | O(log n)        |
+| search     | O(1)            |
+| peek       | O(1)            |
